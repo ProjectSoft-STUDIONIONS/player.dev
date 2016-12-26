@@ -1,0 +1,20 @@
+ @font-face {
+	font-family: 'Bender-Bold';
+		src: url('@{fontpath}Bender-Bold.woff') format('woff'),
+			url('Bender-Bold.ttf') format('truetype'),
+			url('Bender-Bold.svg#Bender-Bold') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'benderbold';
+		src: url('@{fontpath}benderbold.eot');
+		src: url('@{fontpath}benderbold.woff2') format('woff2'),
+			url('@{fontpath}benderbold.eot?#iefix') format('embedded-opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+.benderbold(){
+	font-family: 'Bender-Bold', 'benderbold', Tahoma, sans-serif;
+}

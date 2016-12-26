@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Bender';
+  src: url('@{fontpath}Bender.woff') format('woff'),
+       url('@{fontpath}Bender.ttf') format('truetype'),
+       url('@{fontpath}Bender.svg#Bender') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bender';
+  src: url('@{fontpath}bender.eot');
+  src: url('@{fontpath}bender.woff2') format('woff2'),
+       url('@{fontpath}bender.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.bender() {
+	font-family: 'Bender', 'bender', Tahoma, sans-serif;
+}
+

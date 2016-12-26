@@ -1,0 +1,214 @@
+body {
+	background-color: white;
+	.bender();
+	font-size: 16px;
+}
+.color{
+	&-blue {
+		color: #3EB3EF;
+	}
+}
+.col {
+	&-home {
+		width: 100%;
+		@media (min-width: @screen-md){
+			display: flex;
+			flex-wrap: nowrap;
+			align-content: center;
+		}
+		&-header {
+			padding: 15px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url('@{imageurl}radio_background.jpg');
+			background-position: center center;
+			background-color: black;
+			color: white;
+			&:first-child {
+				@media (min-width: @screen-md){
+					background-position: center right;
+				}
+			}
+			&:last-child {
+				background-image: none;
+				background-color: white;
+				color: black;
+			}
+			@media (min-width: @screen-md){
+				width: 50%;
+			}
+		}
+	}
+	&-description {
+		width: 100%;
+		@media (min-width: @screen-md){
+			display: flex;
+			flex-wrap: nowrap;
+			align-content: center;
+			justify-content: center;
+		}
+		&-head {
+			padding: 30px 15px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-image: url('@{imageurl}background_description.jpg');
+			background-position: center center;
+			background-color: black;
+			color: white;
+			display: flex;
+			align-items: center;
+			align-content: center;
+			justify-content: center;
+			&:first-child {
+				background-image: none;
+				background-color: white;
+				color: black;
+			}
+			@media (min-width: @screen-md){
+				width: 50%;
+			}
+			p, &-list {
+				margin-bottom: 0px;
+				max-width: 580px;
+			}
+			&-list {
+				list-style: none;
+				padding-left: 15px;
+				> li {
+					position: relative;
+					padding-left: 10px;
+					&:before {
+						position: absolute;
+						content: "\2022";
+						display: block;
+						margin-left: -20px;
+						color: #3EB3EF;
+						top: 0px;
+					}
+				}
+			}
+		}
+	}
+}
+.top {
+	&-site {
+		background-color: black;
+		color: white;
+		&-item {
+			min-height: 50px;
+			&-left {
+				.text-center();
+				.clearfix();
+				.logotip {
+					display: inline-block;
+					position: relative;
+					margin-top: 10px;
+					margin-bottom: 10px;
+					&-link {
+						.benderbold();
+						font-size: 16px;
+						&, &:hover, &:focus {
+							text-decoration: none;
+							display: block;
+							text-decoration: none;
+							color: black;
+						}
+						> span {
+							display: block;
+							margin-top: 10px;
+							@media (min-width: @screen-md){
+								margin-top: -10px;
+								margin-left: 56px;
+							}
+						}
+						> img {
+							.center-block();
+							@media (min-width: @screen-md){
+								margin-left: 0px;
+							}
+						}
+					}
+				}
+			}
+			&-right {
+				.clearfix();
+				.description-ad {
+					position: relative;
+					margin-top: 10px;
+					margin-bottom: 0px;
+				}
+			}
+			&-left, &-right {
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+			&:first-child {
+				background-color: white;
+				color: black;
+			}
+			@media (min-width: @screen-md){
+				&-left {
+					img {
+						//.center-block();
+					}
+				}
+			}
+		}
+	}
+}
+.webstore {
+	#gradient > .radial(@inner-color: #3EB3EF; @outer-color:#007BFF);
+	color: white;
+	&-title {
+		.cleanvertisingblack();
+		h1, h2 {
+			font-size: 20px;
+			@media (min-width: 650px){
+				margin-top: 55px;
+				margin-bottom: 65px;
+			}
+		}
+	}
+	.column {
+		margin-bottom: 55px;
+		.col {
+			&-webstore {
+				width: 100%;
+				padding: 15px;
+				&-button {
+					&-btn {
+						display: inline-block;
+						.bender();
+						font-size: 12px;
+						background-color: white;
+						border-radius: 30px;
+						color: black;
+						margin-top: 20px;
+						min-width: 180px;
+						padding-top: 5px;
+						padding-bottom: 5px;
+						padding-left: 20px;
+						padding-right: 20px;
+						text-decoration: none;
+						.transition(all .3s);
+						.user-select(none);
+						white-space: nowrap;
+						&:hover {
+							text-decoration: none;
+							color: white;
+							background-color: black;
+						}
+					}
+				}
+				@media (min-width: @screen-sm){
+					float: left;
+					width: 50%;
+				}
+				@media (min-width: @screen-md){
+					float: left;
+					width: 25%;
+				}
+			}
+		}
+	}
+}
