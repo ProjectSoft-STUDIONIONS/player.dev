@@ -28,35 +28,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		replace: {
-			css: {
-				options: {
-					patterns: [
-						{
-							match: /\/\*\!.+\//g,
-							replacement: function () {
-								return '';
-							}
-						}
-					]
-				},
-				files: [
-					{
-						expand: true,
-						flatten: true,
-						src: '<%= globalConfig.test %>/<%= globalConfig.css %>/build/*.css',
-						dest: '<%= globalConfig.test %>/<%= globalConfig.css %>/'
-					}
-				]
-			}
-		},
 		cssmin: {
 			target: {
 				files: [
 					{
 						expand: true,
 						flatten: true,
-						src: '<%= globalConfig.test %>/<%= globalConfig.css %>/*.css',
+						src: '<%= globalConfig.test %>/<%= globalConfig.css %>/build/*.css',
 						dest: '<%= globalConfig.test %>/<%= globalConfig.css %>/'
 					}
 				]
@@ -192,7 +170,6 @@ module.exports = function(grunt) {
 		'notify:start',
 		'imagemin',
 		'less',
-		'replace',
 		'cssmin',
 		'autoprefixer',
 		'uglify',
@@ -207,7 +184,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('css', [
 		'notify:start',
 		'less',
-		'replace',
 		'cssmin',
 		'autoprefixer',
 		'notify:done'
@@ -215,7 +191,6 @@ module.exports = function(grunt) {
 	grunt.registerTask('fonts', [
 		'notify:start',
 		'less',
-		'replace',
 		'cssmin',
 		'autoprefixer',
 		'copy',
@@ -225,7 +200,6 @@ module.exports = function(grunt) {
 		'notify:start',
 		'imagemin',
 		'less',
-		'replace',
 		'cssmin',
 		'autoprefixer',
 		'notify:done'
